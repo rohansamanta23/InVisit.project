@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.hover-head,.health_box,.myshop{
+  transition: transform 0.3s;
+}
+.hover-head:hover,.health_box:hover,.myshop:hover{
+  transform: scale(0.99);
+}
+.head{
+    background-color: #79c6c6;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  }
+.name{
+    color: antiquewhite;
+    font-size: 3.5rem;
+    position: relative;
+    left: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+
+}
+.name_span{
+    color: rgb(214, 25, 25);
+}
+.search-box {
+    border: solid 5px black;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50px;
+    scale: .6;
+    right: 130px;
+    top: 7px;
+  }
+  .search-box input[type="text"] {
+    font-family: Raleway, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    padding: 7px 40px 5px 10px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 50px;
+    transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms;
+  }
+  .search-box input[type="text"]:focus {
+    outline: none;
+  }
+  .search-box input[type="text"]:focus, .search-box input[type="text"]:not(:placeholder-shown) {
+    width: 600px;
+    transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+  }
+  .search-box input[type="text"]:focus + span, .search-box input[type="text"]:not(:placeholder-shown) + span {
+    bottom: 13px;
+    right: 10px;
+    transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
+  }
+  .search-box input[type="text"]:focus + span:after, .search-box input[type="text"]:not(:placeholder-shown) + span:after {
+    top: 0;
+    right: 10px;
+    opacity: 1;
+    transition: top 300ms ease-out 1100ms, right 300ms ease-out 1100ms, opacity 300ms ease 1100ms;
+  }
+  .search-box span {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -13px;
+    right: -15px;
+    transition: bottom 300ms ease-out 300ms, right 300ms ease-out 300ms;
+  }
+  .search-box span:before, .search-box span:after {
+    content: '';
+    height: 25px;
+    border-left: solid 5px black;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  .search-box span:after {
+    transform: rotate(45deg);
+    opacity: 0;
+    top: -20px;
+    right: -10px;
+    transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
+  }
+.cart{
+  border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    right: 80px;
+}
+
+.profile{
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    right: 15px;
+}
+.user,.cart_img{
+  width: 40px;
+  height: 40px;
+  
+}
+.health_categorier-title{
+ font-weight: bold;
+ padding: 20px 15px;
+ font-size: 1.2rem;
+}
+.health_categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 15px;
+    border-bottom: solid 1px #79c6c6;
+}
+.health_img{
+  width: 45px;
+  padding: 0 10px;
+  border-right: solid 2px rgba(255, 0, 0, 0);
+}
+.health_box{
+    display: flex;
+    align-items: center;
+    background-color: rgb(248, 221, 186);
+    width: 175px;
+    text-align: center;
+    height: 50px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: .9rem;
+}
+main{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right:15px;
+}
+#carouselExampleIndicators{
+  width: 800px !important;
+  margin: 20px 15px;
+  border-radius: 10px;
+  height: 450px;
+
+}
+.carousel-item,.d-block{
+  width: 800px !important;
+  border-radius: 10px;
+  height: 450px;
+  object-fit: fill;
+}
+section{
+  margin: 20px;
+  flex-basis: 650px;
+  max-width: 800px;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.myshop{
+  display: flex;
+  flex-basis: 300px;
+  height: 120px;
+  background-image: url(./img/bg-order.png);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  color: antiquewhite
+}
+.shop-icons{
+  width: 80px;
+  margin-left: 15px;
+}
+.my-order-div{
+  background-image: url(./img/bg-myorder.png);
+  color: rgb(118, 58, 118);
+}
