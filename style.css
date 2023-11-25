@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.d-block,.name,.cart_img,.user,.health_categorier-title,.health_box{
+  pointer-events: none;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -123,7 +126,7 @@ body{
   height: 40px;
   
 }
-.health_categorier-title{
+.health_categorier-title,.shop_category-name{
  font-weight: bold;
  padding: 20px 15px;
  font-size: 1.2rem;
@@ -148,20 +151,23 @@ body{
     width: 175px;
     text-align: center;
     height: 50px;
+    text-decoration: none;
     border-radius: 6px;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: .9rem;
+
 }
 main{
   display: flex !important;
   flex-direction: row;
   justify-content: space-between;
-  margin-right:15px;
+  margin: 0 15px;
+  border-bottom: solid 1px #79c6c6;
 }
 #carouselExampleIndicators{
   width: 800px !important;
-  margin: 20px 15px;
+  margin: 20px 15px 20px 0;
   border-radius: 10px;
   height: 450px;
 
